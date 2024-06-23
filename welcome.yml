@@ -1,0 +1,15 @@
+name: Welcome new users
+
+on: [pull_request]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Send welcome message
+      run: echo "Thank you for your contribution!"
+
